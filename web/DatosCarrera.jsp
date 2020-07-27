@@ -189,8 +189,10 @@
                     }
                     
                 }
-                consulta= " Select idcarrera, codigo, nombre, estado "
-                + " from carrera ";
+                consulta= " Select *from carrera "
+                        +"where "
+                        +"estado='A'" + 
+                        "order by nombre asc";  
                 pst = cn.prepareStatement(consulta);
                 rs = pst.executeQuery();
                 int num = 0;

@@ -215,8 +215,10 @@
                     }
                     
                 }
-                consulta= " Select idcurso, codigo, nombre, horas, creditos, estado "
-                + " from curso ";
+                consulta= " Select *from curso "
+                        +"where "
+                        +"estado='A'" + 
+                        "order by nombre asc";
                 pst = cn.prepareStatement(consulta);
                 rs = pst.executeQuery();
                 int num = 0;

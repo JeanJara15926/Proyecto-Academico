@@ -208,8 +208,10 @@
                     }
                     
                 }
-                consulta= " Select idestudiante, nombre, apellidos, dni, codigo, estado "
-                + " from estudiante ";
+                consulta= " Select *from estudiante "
+                        +"where "
+                        +"estado='A'" + 
+                        "order by nombre asc";
                 pst = cn.prepareStatement(consulta);
                 rs = pst.executeQuery();
                 int num = 0;
